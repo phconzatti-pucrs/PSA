@@ -1,6 +1,11 @@
 package com.phconzatti.ex1.Entidades;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Produto {
+    @Id
     private long id;
     private String descricao;
     private int quantidade;
@@ -18,7 +23,7 @@ public class Produto {
         this.tipo = tipo;
     }
 
-    
+
     public long getId() {
         return this.id;
     }
