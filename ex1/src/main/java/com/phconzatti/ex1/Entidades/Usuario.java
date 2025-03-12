@@ -7,17 +7,17 @@ import jakarta.persistence.Id;
 public class Usuario {
     @Id
     private long id;
-    private String nome, dataNasc;
-    private int numDependentes;
-
+    private String nome; 
+    private int numDependentes, idade;
+    private double totalCompra;
 
     public Usuario() {
     }
 
-    public Usuario(long id, String nome, String dataNasc, int numDependentes) {
+    public Usuario(long id, String nome, int idade, int numDependentes) {
         this.id = id;
         this.nome = nome;
-        this.dataNasc = dataNasc;
+        this.idade = idade;
         this.numDependentes = numDependentes;
     }
 
@@ -38,12 +38,12 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public String getDataNasc() {
-        return this.dataNasc;
+    public int getIdade() {
+        return this.idade;
     }
 
-    public void setDataNasc(String dataNasc) {
-        this.dataNasc = dataNasc;
+    public void setDataNasc(int idade) {
+        this.idade = idade;
     }
 
     public int getNumDependentes() {
@@ -52,6 +52,14 @@ public class Usuario {
 
     public void setNumDependentes(int numDependentes) {
         this.numDependentes = numDependentes;
+    }
+
+    public double getTotalCompra (){
+        return totalCompra;
+    }
+
+    public void setTotalCompra (double totalCompra){
+        this.totalCompra = totalCompra;
     }
 
 }
